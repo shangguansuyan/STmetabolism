@@ -1,0 +1,26 @@
+Package: STmetabolism
+Type: Package
+Title: 整合scMetabolism和celltrek对空转切片进行代谢通路活性分析
+Version: 0.1.0
+Authors@R: 
+    person(given = "Jinghua",
+           family = "Gu",
+           role = c("aut", "cre"),
+           email = "2040519464@qq.com",
+           comment = c(ORCID = "0009-0000-8691-1312", 
+           affiliation = "Anhui Medical University"))
+Maintainer: Jinghua Gu <2040519464@qq.com>
+Description: This package integrates single-cell data with spatial transcriptomics data using CellTrek and scMetabolism, projecting metabolic scores onto spatial slices.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Imports: 
+    CellTrek (>= 0.0.94),
+    dplyr (>= 1.1.4),
+    scMetabolism (>= 0.2.1),
+    Seurat (>= 4.4.0),
+    SeuratObject (>= 4.1.4)
+Depends: 
+    R (>= 2.10)
+LazyDataCompression: xz
