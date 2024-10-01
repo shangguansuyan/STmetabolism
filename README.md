@@ -23,12 +23,12 @@ ST_met <- ST.metabolism(st_data = st, sc_data = sc)
 DimPlot(ST_met$traint, group.by = "type")
 
 # celltrek对象可以直接按照celltrek的教程运行后续步骤
-# CellTrek::celltrek_vis(
-#   ST_met$celltrek@meta.data %>%
-#     dplyr::select(coord_x, coord_y, cell_type:id_new),
-#   ST_met$celltrek@images$anterior1@image,
-#   ST_met$celltrek@images$anterior1@scale.factors$lowres
-# )
+CellTrek::celltrek_vis(
+  ST_met$celltrek@meta.data %>%
+    dplyr::select(coord_x, coord_y, cell_type:id_new),
+  ST_met$celltrek@images$anterior1@image,
+  ST_met$celltrek@images$anterior1@scale.factors$lowres
+)
 
 # 以celltrek的点为基础绘制切片的代谢活性分布图
 SpatialFeaturePlot(ST_met$STmetbolism_obj,
